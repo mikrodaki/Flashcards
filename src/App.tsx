@@ -69,7 +69,7 @@ function FlashCards() {
   const [selectedId, setSelectedId] = useState(0);
 
   const handleDivClick = (id: number) => {
-    setSelectedId(id);
+    setSelectedId((prevId) => (prevId === id ? -1 : id));
   };
 
   return (
